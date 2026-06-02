@@ -8,7 +8,7 @@ export default function ArchiveOrdersPage() {
   const archiveOrders = async () => {
     try {
       const res = await fetch(
-        "http://localhost:5000/api/archive-old-orders",
+        `${process.env.NEXT_PUBLIC_API_URL}/api/archive-old-orders`,
         {
           method: "POST",
         }

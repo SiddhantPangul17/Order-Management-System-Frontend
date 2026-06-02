@@ -7,7 +7,7 @@ export default function TopItemsPage() {
 
   useEffect(() => {
     fetch(
-      "http://localhost:5000/api/analytics/top-items"
+      `${process.env.NEXT_PUBLIC_API_URL}/api/analytics/top-items`
     )
       .then((res) => res.json())
       .then(setData);

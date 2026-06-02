@@ -42,7 +42,7 @@ export default function OrdersPage() {
       setLoading(true);
       setSearchAttempted(true);
 
-      let url = "http://localhost:5000/orders";
+      let url = `${process.env.NEXT_PUBLIC_API_URL}/orders`;
 
       if (storeId.trim()) {
         url += `?store_id=${storeId}`;

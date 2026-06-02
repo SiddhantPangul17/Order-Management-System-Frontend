@@ -7,7 +7,7 @@ export default function RevenuePage() {
 
   useEffect(() => {
     fetch(
-      "http://localhost:5000/api/analytics/revenue-per-store"
+      `${process.env.NEXT_PUBLIC_API_URL}/api/analytics/revenue-per-store`
     )
       .then((res) => res.json())
       .then(setData);

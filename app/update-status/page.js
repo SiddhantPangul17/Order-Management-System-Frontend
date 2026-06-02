@@ -50,7 +50,7 @@ export default function UpdateStatus() {
       setLoading(true);
 
       await axios.patch(
-        `http://localhost:5000/orders/${orderId}/status`,
+        `${process.env.NEXT_PUBLIC_API_URL}/orders/${orderId}/status`,
         { status }
       );
 

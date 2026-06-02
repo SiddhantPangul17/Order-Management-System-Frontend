@@ -74,7 +74,7 @@ export default function StorePage() {
     try {
       setIsOrderPlacing(true);
 
-      await axios.post("http://localhost:5000/orders", {
+      await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/orders`, {
         store_id: store.store_id,
         items: Object.values(cart).map(({ item_id, qty }) => ({
           item_id,

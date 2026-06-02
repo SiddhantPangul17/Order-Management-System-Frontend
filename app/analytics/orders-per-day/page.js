@@ -7,7 +7,7 @@ export default function OrdersPerDayPage() {
 
   useEffect(() => {
     fetch(
-      "http://localhost:5000/api/analytics/orders-per-day"
+      `${process.env.NEXT_PUBLIC_API_URL}/api/analytics/orders-per-day`
     )
       .then((res) => res.json())
       .then(setData);
